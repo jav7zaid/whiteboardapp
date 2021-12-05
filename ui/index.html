@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whiteboard APP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="whiteboard">
+    <canvas class="canvas"></canvas>
+  </div>
+
+  <div class="colors">
+    <div class="color black"></div>
+    <div class="color blue"></div>
+  </div>
+  <div class="rightContainer">
+    <span>
+      <h3>  Online Users </h3>
+    </span>
+    <div id="users" class="users"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+</body>
+</html>

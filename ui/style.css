@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.whiteboard {
+  height: 90%;
+  width: 80%;
+  position: absolute;
+  justify-content: center;
+  background-color: #f3f3f3;
+  border: 5px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.colors {
+  position: fixed;
+}
+
+.color {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.rightContainer {
+  float: right;
+  height: 90%;
+  width: 18%;
+  background-color: rgb(221, 229, 243);
+}
+
+.rightContainer span {
+  text-align: center;
+  border-bottom: 1px darkblue;
+}
+
+#users div {
+  background-color: #CCC;
+  padding: 5px;
+  text-align: center;
+}
+
+#users div:nth-child(2n) {
+  background-color: #FFF;
+  padding: 5px;
+  text-align: center;
+}
+
+.color.black { background-color: black; border-radius: 50%;}
+.color.blue { background-color: blue; border-radius: 50%;}
