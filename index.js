@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const http = require('http').createServer(app).listen(8080);
+const http = require('http').createServer(app).listen(3000, () => console.log('running on 3000'));
 const io = require('socket.io')(http);
 const Redis = require('ioredis');
 //const redisClient = new Redis();
@@ -12,16 +12,12 @@ const users = {};
 const cluster = new Redis.Cluster(
   [
     {
-      host: 'whiteapp.05sasc.clustercfg.use2.cache.amazonaws.com:6379',
+            port: 6379, host: 'redis.05sasc.clustercfg.use2.cache.amazonaws.com'
     },
   ],
   {
     slotsRefreshTimeout: 2000,
     dnsLookup: (address, callback) => callback(null, address),
-    redisOptions: {
-      tls: {},
-      password: process.env.REDIS_AUTH_TOKEN,
-    },
   },
 );
 
